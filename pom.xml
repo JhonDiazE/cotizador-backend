@@ -10,10 +10,10 @@
 	</parent>
 
 	<groupId>com.model.sistem</groupId>
-	<artifactId>cotizador</artifactId>
+	<artifactId>cotizador-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>cotizador</name>
+	<name>cotizador-backend</name>
 	<description>Cotizador de productos</description>
 	<properties>
 		<java.version>11</java.version>
