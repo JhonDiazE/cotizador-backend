@@ -26,17 +26,17 @@ jobs:
 
       - name: Build
         run: |
-          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/cotizador:latest .
+          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/cotizador-backend:latest .
 
       - name: Push
         run: |
-          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/cotizador:latest
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/cotizador-backend:latest
 
       - name: Deploy
         run: |
-          gcloud run deploy cotizador \
+          gcloud run deploy cotizador-backend \
           --region europe-west1 \
-          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/cotizador \
+          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/cotizador-backend \
           --platform managed \
           --allow-unauthenticated \
           --project ${{ secrets.GCP_PROJECT_ID }}
